@@ -1,0 +1,212 @@
+.containerPage {
+  height: 100vh;
+
+  display: flex;
+  align-items: stretch;
+}
+
+.background {
+  flex: 1;
+  background: var(--color-live) 0% 0% no-repeat padding-box;
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .legend {
+    margin-bottom: 4rem !important;
+  }
+
+  img {
+    width: 35rem;
+    text-align: center;
+    margin-left: 1.8rem;
+
+    @media (min-width: 1920px) {
+      width: 65rem;
+    }
+  }
+
+  h3, p {
+    text-align: center;
+    color: var(--color-base);
+  }
+
+  @media screen and (max-width: 1024px) {
+      display: none;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  max-width: 700px;
+}
+
+.formClass {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  h1 {
+    width: 500px;
+    text-align: right;
+  }
+
+  @media screen and (max-width: 700px) {
+    h1 {
+      width: 400px;
+    }
+  }
+
+  form {
+    margin: 1rem;
+    width: 340px;
+    text-align: center;
+
+    h2 {
+      color: var(--color-primary);
+      margin-bottom: 24px;
+    }
+
+    a {
+      color: var(--color-primary);
+      display: block;
+      margin-top: 10px;
+      text-align: right;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    a:hover {
+      color: var(--color-primary-dark);
+    }
+  }
+}
+
+.inputForm {
+  background: var(--color-base);
+  padding: 0.5rem;
+  width: 100%;
+
+  border-bottom: 2px solid var(--color-primary);
+  color: var(--color-primary);
+
+  display: flex;
+  align-items: center;
+
+  & + div {
+    margin-top: 8px;
+  }
+
+  input {
+    flex: 1;
+    background: transparent;
+    border: 0;
+    color: var(--color-base-dark);
+
+    &::placeholder {
+      color: var(--color-primary);
+    }
+  }
+
+  img {
+    width: 1.3rem;
+    height: 1.3rem;
+    margin-right: 16px;
+  }
+}
+
+.messageInputError  {
+  color: var(--color-input-error); /* red */
+}
+
+.inputError {
+  border-bottom: 2px solid var(--color-input-error);
+}
+
+.lineOr{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.5rem;
+
+  p{
+    margin: 10px;
+    color: var(--color-primary);
+  }
+
+  hr{
+    flex: 1;
+  }
+}
+
+.footer {
+  color: var(--color-primary);
+  display: block;
+  text-align: center;
+  font-size: var(--font-size-footers);
+  margin-bottom: 40px;
+
+  p {
+    margin-top: 0.5rem;
+  }
+
+  a {
+    color: var(--color-live);
+    &:hover {
+      color: var(--color-live-dark);
+    }
+  }
+}
+
+.SignInButton {
+  background: var(--color-primary);
+  height: 56px;
+  border-radius: 100px;
+  border: 0;
+  padding: 0;
+  color: var(--color-base);
+  width: 50%;
+  font-weight: var(--font-size-primary);
+  margin-top: 0.3rem;
+  transition: background-color 0.2s;
+}
+
+.SignInButton:hover {
+  background: var(--color-primary-dark);
+}
+
+.GoogleButton {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--color-base);
+  height: 56px;
+  border-radius: 100px;
+  border: 0;
+  box-shadow: 0px 3px 5px var(--color-shadows);
+  padding: 0;
+  color: var(--color-base-dark);
+  width: 80%;
+  font-weight: var(--font-size-primary);
+  margin-top: 0.3rem;
+  transition: background-color 0.2s;
+
+  img{
+    width: 1.7rem;
+    height: 1.7rem;
+    margin-right: 0.5rem;
+  }
+}
+
+.GoogleButton:hover {
+  background: var(--color-primary);
+    color: var(--color-base);
+}

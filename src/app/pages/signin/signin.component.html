@@ -1,0 +1,88 @@
+<div class="containerPage">
+  <div class="background">
+    <mdb-carousel [isControls]="true" class="slide carousel-fade" [animation]="'fade'">
+      <mdb-carousel-item class="d-block">
+          <img src="assets/Data.png" alt="First slide">
+          <div class="legend">
+            <h3>First Marcenas mattis egestas</h3>
+            <p>
+              Erdum et malesuada fames ac ante ileum primmer in faucibus
+              uspendisse porta.
+            </p>
+          </div>
+      </mdb-carousel-item>
+      <mdb-carousel-item class="d-block">
+          <img src="assets/Data2.png" alt="Second slide">
+          <div class="legend">
+            <h3>Second Marcenas mattis</h3>
+            <p>
+              Erdum et malesuada fames ac ante ileum primmer in faucibus
+              uspendisse porta.
+            </p>
+          </div>
+      </mdb-carousel-item>
+    </mdb-carousel>
+  </div>
+
+  <div class="content">
+    <div class="formClass">
+      <h1>Invision</h1>
+      <form [formGroup]="meuFormGroup">
+        <h2>Welcome to Invision</h2>
+
+        <div class="inputForm" [ngClass]="{inputError: meuFormGroup.controls.email.touched && meuFormGroup.controls.email.errors}">
+          <img src="/assets/email.svg" alt="Simples Ideias">
+          <input type="email" formControlName="email" placeholder="Users name or Email">
+
+          <ng-container *ngIf="meuFormGroup.controls.email.touched">
+            <div class="messageInputError">
+            <span *ngIf="meuFormGroup.controls.email.errors?.email">
+              E-mail inválido
+            </span>
+            <span *ngIf="meuFormGroup.controls.email.errors?.required">
+              Campo obrigatório
+            </span>
+          </div>
+
+          </ng-container>
+        </div>
+
+        <div class="inputForm" [ngClass]="{inputError: meuFormGroup.controls.password.touched && meuFormGroup.controls.password.errors}">
+          <img src="/assets/padlock.svg" alt="Simples Ideias">
+          <input type="password" formControlName="password" placeholder="Password">
+          <ng-container *ngIf="meuFormGroup.controls.password.touched">
+            <div class="messageInputError">
+              <span *ngIf="meuFormGroup.controls.password.errors?.minlength">
+                No mínimo 6 dígitos
+              </span>
+              <span *ngIf="meuFormGroup.controls.password.errors?.required">
+                Campo obrigatório
+              </span>
+            </div>
+          </ng-container>
+        </div>
+
+        <a href="forgot">Forgot password?</a>
+
+        <button type="submit" class="SignInButton">Sign In</button>
+
+        <div class="lineOr">
+          <hr />
+            <p>Or</p>
+          <hr />
+        </div>
+
+        <button type="submit" class="GoogleButton">
+          <img src="/assets/pesquisa.svg" alt="Simples Ideias">
+          Sign in with Google
+        </button>
+
+      </form>
+
+      <div class="footer">
+        New Invision? <a routerLink="/signup">Create Account</a>
+      </div>
+    </div>
+  </div>
+
+</div>

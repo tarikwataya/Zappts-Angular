@@ -1,0 +1,109 @@
+<div class="containerPage">
+  <div class="background">
+    <mdb-carousel [isControls]="true" class="slide carousel-fade" [animation]="'fade'">
+      <mdb-carousel-item class="d-block">
+          <img src="assets/Data.png" alt="First slide">
+          <div class="legend">
+            <h3>First Marcenas mattis egestas</h3>
+            <p>
+              Erdum et malesuada fames ac ante ileum primmer in faucibus
+              uspendisse porta.
+            </p>
+          </div>
+      </mdb-carousel-item>
+      <mdb-carousel-item class="d-block">
+          <img src="assets/Data2.png" alt="Second slide">
+          <div class="legend">
+            <h3>Second Marcenas mattis</h3>
+            <p>
+              Erdum et malesuada fames ac ante ileum primmer in faucibus
+              uspendisse porta.
+            </p>
+          </div>
+      </mdb-carousel-item>
+    </mdb-carousel>
+  </div>
+
+  <div class="content">
+    <div class="formClass">
+      <h1>Invision</h1>
+      <form [formGroup]="signUp">
+        <h2>Getting Started</h2>
+
+        <div class="inputForm" [ngClass]="{inputError: signUp.controls.name.touched && signUp.controls.name.errors}">
+          <img src="/assets/user.svg" alt="Simples Ideias">
+          <input type="text" formControlName="name" placeholder="Full Name">
+
+          <ng-container *ngIf="signUp.controls.name.touched">
+            <div class="messageInputError">
+            <span *ngIf="signUp.controls.name.errors?.required">
+              Campo obrigatório
+            </span>
+          </div>
+
+          </ng-container>
+        </div>
+
+        <div class="inputForm" [ngClass]="{inputError: signUp.controls.email.touched && signUp.controls.email.errors}">
+          <img src="/assets/email.svg" alt="Simples Ideias">
+          <input type="email" formControlName="email" placeholder="Users name or Email">
+
+          <ng-container *ngIf="signUp.controls.email.touched">
+            <div class="messageInputError">
+            <span *ngIf="signUp.controls.email.errors?.email">
+              E-mail inválido
+            </span>
+            <span *ngIf="signUp.controls.email.errors?.required">
+              Campo obrigatório
+            </span>
+          </div>
+
+          </ng-container>
+        </div>
+
+        <div class="inputForm" [ngClass]="{inputError: signUp.controls.password.touched && signUp.controls.password.errors}">
+          <img src="/assets/padlock.svg" alt="Simples Ideias">
+          <input type="password" formControlName="password" placeholder="Password">
+          <ng-container *ngIf="signUp.controls.password.touched">
+            <div class="messageInputError">
+              <span *ngIf="signUp.controls.password.errors?.minlength">
+                No mínimo 6 dígitos
+              </span>
+              <span *ngIf="signUp.controls.password.errors?.required">
+                Campo obrigatório
+              </span>
+            </div>
+          </ng-container>
+        </div>
+
+        <button type="submit" class="SignInButton">Sign Up</button>
+
+        <div class="lineOr">
+          <hr />
+            <p>Or</p>
+          <hr />
+        </div>
+
+        <button type="submit" class="GoogleButton">
+          <img src="/assets/pesquisa.svg" alt="Simples Ideias">
+          Sign in with Google
+        </button>
+
+      </form>
+
+      <div class="footer">
+        By signing up, you agree to <b>Invision</b>
+        <br />
+        <a href="/">Terms of Conditions</a> and
+        <a href="/">Privacy Policy</a>
+        <p>
+          Already on Invision?
+          <a href="/">
+            Log in
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+</div>
